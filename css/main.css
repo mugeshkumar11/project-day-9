@@ -602,49 +602,111 @@
  font-size:15px;
  background-color:#f2f6fa;
  border:none;
+ cursor:pointer;
 }
 .portfoliobutton span{
 	color: #fdbf2b;
 }
-.portfolioflex{
-	display:flex;
-	width:100%;
-	padding-top:30px;
+.portfoliobutton  button:hover{
+	color: #fdbf2b;
 }
-.portfolioimage1{
-	width:33.3%;
-	padding-left:20px;
+.portfolio-list  {
+       display: flex;
+       flex-wrap: wrap;
+	   margin-top:40px;
+    
+}
+.portfolio-list .portfoliobox{
+    width: 33.33%;
+    height: 270px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.portfoliocont {
+    position: relative;
+    overflow: hidden;
+ }
+.portfoliocont img{
+    display: flex;
+    width: 100%;
+    height: 270px;
+   transition: all 0.5s ease;
+   border-radius:7px;
+}
+
+.portfoliotext{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+    background-color: rgba(0, 0, 0, 0.30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+	 transform: translateX(500px);
+   transition: all 0.5s ease-in-out;
+}
+.portfolioinfo{
+	position:absolute;
+	top:30%;
+	opacity:0;
+    transform: translateY(-30px);
+    transition: all 0.5s ease;
+}
+.portfoliobox:hover .portfoliotext{
+    opacity: 1;
+	transform: translateX(0px);
+	  transition: all 0.5s ease-in-out;
+	  border-radius:7px;
+}
+.portfoliobox:hover .portfolioinfo{
+    
+    transform: translateY(0px);
+    transition: all 0.5s ease;
+	opacity:1;
+}
+.portfoliobox:hover .portfolioinfo{
+    opacity: 1;
+} 
+.portfolioinfo h5{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+	padding-top:80%;
+	padding-bottom:5px;
+    font-family: "Raleway", sans-serif;
+}
+.portfolioinfo h6 {
+    color: #fff;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
 	
 }
-.portfolioimage1 img{
-	width:100%;
-	height:auto;
-	border-radius:7px;
-	margin-bottom:20px;
+.portfolioicon{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
 }
-.portfolioimage2{
-	width:33.3%;
-    padding-left:20px;
+.portfolioicon a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size:22px;
+    color: #fdc134;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;
+    margin: 0 5px;
 }
-.portfolioimage2 img{
-	width:100%;
-	height:auto;
-	margin-bottom:20px;
-	border-radius:7px;
+.portfolioicon  a:hover {
+    color:#fff;
 }
-.portfolioimage3{
-	width:33.3%;
-	padding-right:20px;
-	padding-left:20px;
-	
-}
-.portfolioimage3 img{
-	width:100%;
-	height:auto;
-	margin-bottom:20px;
-	border-radius:7px;
-	
-}
+
 .team{
 	background: linear-gradient(180deg, #f2f6fa 0%, #fff 100%);
 	padding-bottom:70px;
@@ -710,10 +772,14 @@
 	padding-bottom:20px;
 }
 .teamicon i{
-	letter-spacing:2px;
 	font-family:sans-serif;
 	color:#5289ba;
-	font-size:16px;	
+	font-size: 18px;
+    margin: 0 2px;
+    cursor:pointer;	
+}
+.teamicon i:hover{
+	 color: #fdc134;
 }
 .pricing{
 	background: linear-gradient(180deg, #f2f6fa 0%, #fff 100%);
@@ -758,7 +824,7 @@
 .pricingbox{
 	width:33.33%;
 	background-color:#fff;
-	height:340px;
+	height:400px;
 	margin-top:30px;
 	box-shadow:2px 2px 2px 2px #eceff3;
 }
@@ -768,26 +834,26 @@
 .pricingbox1 h2{
 	color:#717071;
 	font-family:sans-serif;
-	font-size:16px;	
+	font-size:28px;	
 	padding-top:30px;
 	padding-bottom:15px;
 }
 .pricingbox1 h3{
 	color:#fdbf2d;
 	font-family:sans-serif;
-	font-size:28px;	
+	font-size:46px;	
 	padding-bottom:10px;
 }
 .pricingbox1 p{
 	color:#c6c3be;
 	font-family:sans-serif;
-	font-size:13px;	
+	font-size:18px;	
 	padding-right:50px;
 }
 .pricingbox p{
 	color:#acacbb;
 	font-family:sans-serif;
-	font-size:14px;	
+	font-size:16px;	
 	padding-left:50px;
 	padding-bottom:15px;
 }
@@ -795,7 +861,7 @@
 	
 	color:#acacbb;
 	font-family:sans-serif;
-	font-size:14px;	
+	font-size:16px;	
 	padding-left:50px;
 	padding-bottom:15px;
 }
@@ -807,8 +873,9 @@
 	background-color:#213b52;
 	color:#fff;
 	border-radius:50px;
-	padding:5px 20px;
+	padding:6px 30px;
 	border:none;
+	cursor:pointer;
 }
 .pricingbox3 {
 	text-align:center;
@@ -816,20 +883,20 @@
 .pricingbox3 h2{
 	color:#717071;
 	font-family:sans-serif;
-	font-size:16px;	
+	font-size:28px;	
 	padding-top:30px;
 	padding-bottom:15px;
 }
 .pricingbox3 h3{
 	color:#fdbf2d;
 	font-family:sans-serif;
-	font-size:28px;	
+	font-size:46px;	
 	padding-bottom:10px;
 }
 .pricingbox3 p{
 	color:#c6c3be;
 	font-family:sans-serif;
-	font-size:13px;	
+	font-size:18px;	
 	padding-right:50px;
 }
 .pricingbox i{
@@ -845,7 +912,7 @@
 	background-color:#fff;
 	border:1px solid #fdc134;
 	position:relative;
-	height:400px;
+	height:460px;
 	box-shadow:2px 2px 2px 2px #eceff3;
 }
 .pricebox2 {
@@ -854,21 +921,21 @@
 .pricebox2 h2{
 	color:#717071;
 	font-family:sans-serif;
-	font-size:16px;	
+	font-size:28px;	
 	padding-top:10px;
 	padding-bottom:15px;
 }
 .pricebox2 h3{
 	color:#fdbf2d;
 	font-family:sans-serif;
-	font-size:28px;	
+	font-size:46px;	
 	padding-top:10px;
 	padding-bottom:10px;
 }
 .pricebox2 p{
 	color:#c6c3be;
 	font-family:sans-serif;
-	font-size:13px;	
+	font-size:18px;	
 	padding-right:50px;
 }
 .pricingbox2 i{
@@ -878,7 +945,7 @@
 .pricingbox2 p{
 	color:#acacbb;
 	font-family:sans-serif;
-	font-size:14px;	
+	font-size:16px;	
 	padding-left:50px;
 	padding-bottom:15px;
 }
@@ -895,8 +962,9 @@
 	background-color:#fdc134;
 	color:#fff;
 	border-radius:50px;
-	padding:5px 20px;
+	padding:6px 30px;
 	border:none;
+	cursor:pointer;
 }
 .pricebutton2 button{
 	background-color:#fdc134;
@@ -1038,4 +1106,34 @@
 	padding-top:10px;
 	line-height:18px;
 	padding-bottom:15px;
+}
+.footer{
+    width: 100%;
+    height: 450px;
+    background-image:url(../image/footer-bg.jpg);
+    background-size: cover;  
+    background-repeat: no-repeat; 
+    background-position: center 0;
+	color:#fff;
+	position:relative;
+}
+.footer::before{
+   content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(26, 46, 64, 0.85);
+    z-index: 1;
+}
+.footercopy{
+	display:flex;
+	justify-content:space-between;
+	padding-top:25%;
+}
+.footercopy h3{
+	color: #fff;
+    font-size: 14px;
+	z-index:2;
 }
