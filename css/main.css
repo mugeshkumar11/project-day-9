@@ -1275,18 +1275,17 @@ form .formgroup {
 .formbutton button:hover{
 	background-color:#fdc134;
 }
-.footer{
+.footerback{
     width: 100%;
-    height:500px;
+    height:600px;
     background-image:url(../image/footer-bg.jpg);
     background-size: cover;  
     background-repeat: no-repeat; 
     background-position: center 0;
 	color:#fff;
 	position:relative;
-	
 }
-.footer:after{
+.footerback::before{
 	content: "";
     position: absolute;
     left: 0;
@@ -1300,12 +1299,22 @@ form .formgroup {
 	display:flex;
 	justify-content:space-between;
 	padding-top:10%;
+	position:absolute;
+	top:50%;
 	
 }
 .footercopy h3{
 	color: #fff;
     font-size: 14px;
 	z-index:2;
+	
+}
+.footercopy h4{
+	color: #fff;
+    font-size: 14px;
+	z-index:2;
+	position:absolute;
+	right:-950px;
 }
 .footercopy strong{
 	font-family:bolder;
@@ -1314,14 +1323,21 @@ form .formgroup {
 }
 .footercopy span{
 	color:#fdc134;
+	cursor:pointer;
 }
 .footerflex{
 	padding-top:80px;
 	text-align:center;
 }
+.footer{
+	position:relative;
+}
 .footercontent{
 	text-align:center;
     z-index:2;
+	position:absolute;
+	top:10%;
+	right:27%;
 }
 .footercontent h2{
 	font-size: 36px;
@@ -1338,11 +1354,11 @@ form .formgroup {
 	font-style: italic;
     margin: 30px 0 0 0;
 	z-index:2;
+	font-family: "Open Sans", sans-serif;
 	
 }
 .footerform{
 padding-top:20px;
-position:relative;
 z-index:2;
 }
 .footerform input{
@@ -1354,6 +1370,9 @@ z-index:2;
 	font-size:15px;
 	box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
 	border:none;
+	position:absolute;
+	right:26%;
+	top:30%;
 	z-index:2;
 }
 .footerform button{
@@ -1364,6 +1383,7 @@ z-index:2;
 	border-radius:50px;
 	font-size:15px;
 	position:absolute;
+	top:30%;
 	right:26%;
 	color:#fff;
 	background-color:#ffc107;
@@ -1377,6 +1397,9 @@ z-index:2;
 	color: #fff;
     font-size: 14px;
 	z-index:2;
+	position:absolute;
+	top:35%;
+	right:38%;
 }
 .footericons i{
 	font-size: 18px;
